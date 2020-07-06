@@ -65,6 +65,8 @@ class Movie(models.Model):
     url = models.SlugField(max_length=160, unique=True)
     draft = models.BooleanField("Черновик", default=False)
 
+    objects = models.Manager()
+
     def __str__(self):
         return self.title
 
